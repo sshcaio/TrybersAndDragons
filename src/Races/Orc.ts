@@ -11,7 +11,7 @@ class Orc extends Race {
     super(
       _name,
       _dexterity,
-    )
+    );
   }
 
   public get maxLifePoints(): number {
@@ -19,10 +19,9 @@ class Orc extends Race {
   }
 
   public static createdRacesInstances(): number {
-    this._raceInstance++;
+    this._raceInstance += 1;
     return this._raceInstance;
   }
-
 }
 
 export default Orc;
