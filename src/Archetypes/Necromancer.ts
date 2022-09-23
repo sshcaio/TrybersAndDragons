@@ -3,6 +3,7 @@ import Archetype from './Archetype';
 
 class Necromancer extends Archetype {
   private static _archetypeInstance = 0;
+  private _energyType: EnergyType = 'mana';
 
   public static createdArchetypeInstances(): number {
     this._archetypeInstance += 1;
@@ -10,8 +11,8 @@ class Necromancer extends Archetype {
   }
 
   public get energyType(): EnergyType {
-    return 'mana';
-  };
+    return this._energyType;
+  }
 }
 
 export default Necromancer;
